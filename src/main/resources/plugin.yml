@@ -1,0 +1,7 @@
+name: MyFirstPlugin
+main: mullac.myfirstplugin.plugin.Plugin
+version: 1
+commands:
+  instawall:
+    description: Create an instant wall
+    usage: /instawall
