@@ -29,7 +29,6 @@ public class InstaHouseCmd implements CommandExecutor {
         Location l = p.getLocation();
         l.setPitch(0);
         for (int i = 0; i < height; ++i) {
-
             for (float d = 0; d < 180.0; d += degrees) {
                 l.setYaw(d);
                 Vector dir = l.getDirection();
@@ -41,24 +40,6 @@ public class InstaHouseCmd implements CommandExecutor {
             }
             l.setY(l.getY() + 1);
         }
-        /*
-
-        Location wallPos = l.clone();
-        wallPos.add(d);
-        wallPos.setYaw(wallPos.getYaw() + 90);
-        d = wallPos.getDirection();
-
-        for (int i = 0; i < 10; ++i) {
-            Location next = wallPos.clone();
-            next.setY(next.getY() + 1);
-            for (int j = 0; j < 90; ++j) {
-                Block b = wallPos.getBlock();
-                b.setType(Material.STONE);
-                wallPos.add(d);
-            }
-            wallPos = next;*/
-
-
         return true;
     }
 }
